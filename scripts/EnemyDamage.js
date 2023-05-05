@@ -194,14 +194,14 @@ nextLevelButton.addEventListener("click", function () {
   setTimeout(function () {
     loading.style.opacity = 0;
     playAudio("audio_game");
+    respawnCube();
+    saveGameProgress(health, AnimationSpeed, saveHP);
   }, 1000);
   setTimeout(function () {
     nextLevel.style.zIndex = -999;
     loading.style.zIndex = -999;
   }, 3000);
-  respawnCube();
-  saveGameProgress(health, AnimationSpeed, saveHP);
-  nextLevelButton.disabled = true;
+  
 });
 
 exit.addEventListener("click", function () {
