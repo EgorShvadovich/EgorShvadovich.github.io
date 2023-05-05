@@ -1,0 +1,176 @@
+.level{
+  display:none;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: top;
+}
+#game-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  background-image: url(images/level1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#red-cube {
+  position: absolute;
+  top: 55%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 10%;
+  height: 35%;
+  background-image: url(images/enemy4.png);
+  min-width: 150px;
+  min-height: 200px;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  animation: move-horizontal 10s linear infinite;
+}
+
+#health-bar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  background-color: green;
+}
+
+#health-bar-value {
+  font-size: 10px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#health-bar-background {
+  position: absolute;
+  top: 35%;
+  left: calc(50% - 10%);
+  margin-left: -2.5%;
+  transform: translateX(0);
+  width: calc(100% - 85%);
+  height: 2%;
+  min-width: 150px;
+  border: 1px solid black;
+  animation: move-horizontal 10s linear infinite;
+}
+
+#crosshair {
+  position: fixed;
+  background-image: url(images/crosshairPng.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10000;
+  width: 3%;  
+  height: 5%;
+  border-radius: 50%;
+  clip-path: circle(50% at 50% 50%);
+  pointer-events: none;
+}
+#hand {
+  position:fixed;
+  background-image: url(images/hand_ak.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10;
+  width: 40%;  
+  height: 30%;
+bottom:0;
+  pointer-events: none;
+}
+
+#buttons-container {
+  height: 35%;
+  width: 98%;
+  margin-left: 1%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#game-button-weapon1 {
+  width: 15%;
+  height: 100%;
+  margin-bottom: 1%;
+  align-items: center;
+  background-image: url(images/deagle.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+}
+
+#game-button-weapon2 {
+  width: 15%;
+  height: 100%;
+  margin-bottom: 1%;
+  align-items: center;
+  background-image: url(images/ak.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+}
+
+#game-button-weapon3 {
+  width: 15%;
+  height: 100%;
+  margin-bottom: 2%;
+  align-items: center;
+  background-image: url(images/awp.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+}
+
+#player-health-bar-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 15%;
+  height: 5%;
+  background-color: #666;
+  border: 2px solid #333;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+#player-health-bar {
+  height: 100%;
+  width: 100%;
+  background-color: #0f0;
+  transition: width 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+#player-health-bar-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+@keyframes move-horizontal {
+  0% {
+    left: 10%;
+  }
+  50% {
+    left: calc(100% - 20%);
+  }
+  100% {
+    left: 10%;
+  }
+}
+

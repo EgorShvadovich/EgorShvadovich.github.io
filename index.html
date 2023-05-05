@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/csgoProjectcs.css">
+        <script defer src ="scripts/main.js"></script>
+        <script defer src ="scripts/saveGame.js"></script>
+        <script defer src ="scripts/sound.js"></script>
+        <title>Игровое поле</title>
+    </head>
+    <body>
+      <audio id="audio_main_menu">
+        <source src="sound/mainmenu.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="audio_game">
+        <source src="sound/bombplanted.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="audio_win">
+        <source src="sound/roundmvpanthem.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="audio_loose">
+        <source src="sound/deathcam.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="audio_deagle">
+        <source src="sound/deagle.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="audio_ak">
+        <source src="sound/ak.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="audio_awp">
+        <source src="sound/awp1.mp3" type="audio/mpeg">
+      </audio>
+        <div class="loading">
+          <div id="click">click me</div>
+        </div>
+        <div class="main_menu">
+            <div class="game_menu">
+                <a id="new_game">New Game</a>
+                <a id="load_game"> Load Game</a>
+                <a id="control">Control</a>
+                <a id="quit">Quit</a>
+            </div>
+            <div class="game_controls">
+                <p>esc - close the game</p>
+                <p>1,2,3 - change weapon</p>
+                <p>m - exit to main menu</p>
+                <p id="close_control">Close controls</p>
+            </div>
+        </div>
+        <div class="next_level">
+          <p>You Win!</p>
+          <p class="next_level_button">Next level</p>
+          <p class="exit_menu">Exit to main menu</p>
+        </div>
+        <div class="level">
+          <div id="buttons-container">
+            <div id="game-button-weapon1"></div>
+            <div id="game-button-weapon2"></div>
+            <div id="game-button-weapon3"></div>
+          </div>
+            <div id="game-container">
+                <div id="player-health-bar-background">
+                  <div id="player-health-bar">
+                    <div id="player-health-bar-value">100</div>
+                  </div>
+                </div>
+              </div>
+              <script defer src="scripts/EnemyDamage.js"></script>
+              <div id="crosshair"></div>
+              <script defer src="scripts/crosshair.js"></script>
+              <div id="hand"></div>
+              <script defer src="scripts/WeaponFactory.js"></script>
+              <script defer src="scripts/handMove.js"></script>
+              <script defer src="scripts/PlayerDamage.js"></script>
+        </div>
+    </body>
+</html>
